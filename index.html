@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phonearena</title>
+</head>
+
+<body>
+    <header class="px-20 py-8 bg-[#ff38380a] h-[110vh]">
+        <nav class="flex justify-between">
+            <h1 class="text-2xl cursor-pointer">
+                Phone<span class="text-red-500">arena</span>
+            </h1>
+            <button class="btn bg-red-600 text-white font-medium hover:bg-red-500">
+                Sign Up
+            </button>
+        </nav>
+        <div class="banner flex-col justify-center items-center text-center my-10">
+            <h2 class="text-5xl font-medium capitalize mt-32 mb-10 leading-[60px]">
+                Apple announces the <br />
+                date for iPhone 15 'Wonderlust' event
+            </h2>
+            <p class="text-2xl text-center text-[#706F6F]">
+                Apple has now confirmed that its next event for 2023, where it will
+                apparently announce its new <br />
+                smartphone lineup, the iPhone 15, and new watches, will take place
+                next month.
+            </p>
+            <button class="btn bg-red-700 my-8 text-white font-medium hover:bg-red-600">
+                View Now
+            </button>
+        </div>
+    </header>
+    <div class="bottom-showcase mt-[-30vh]">
+        <div class="img-showcase flex justify-center items-center">
+            <img class="w-72" src="./images/pngwing 3.png" alt="" />
+            <img class="w-72" src="./images/pngwing 1.png" alt="" />
+            <img class="w-72" src="./images/pngwing 2.png" alt="" />
+        </div>
+    </div>
+    <main class="container mx-auto my-20">
+        <section class="search-phone text-center">
+            <h1 class="text-4xl font-semibold mb-8">Search your phone</h1>
+            <div class="search-input flex justify-center items-center gap-5">
+                <input id="search-field" type="text" placeholder="Search..."
+                    class="input input-bordered w-full max-w-xs" />
+                <button onclick="searchHandler()" class="btn bg-red-600 text-white font-medium hover:bg-blue-500">
+                    Search
+                </button>
+            </div>
+        </section>
+        <section class="search-result text-center mt-20 mb-4">
+            <!-- spinner/loader -->
+            <span id="result-loading" class="loading loading-infinity loading-lg text-red-600 hidden"></span>
+
+            <div class="phone">
+                <div id="phone-container" class="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"></div>
+            </div>
+        </section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="showDetailsModal" class="modal modal-bottom sm:modal-middle">
+        </dialog>
+        <section id="show-all" class="show-all-conditional text-center my-16 flex justify-center items-center hidden">
+            <button onclick="showAllHandler()" class="btn bg-red-600 px-10 text-white font-medium hover:bg-blue-500">
+                Show All
+            </button>
+        </section>
+    </main>
+    <footer class="bg-[#ff38380a] p-10 h-[48vh] mt-10">
+        <div class="footer-links container mx-auto flex justify-between items-center">
+            <div class="content">
+                <h1 class="text-2xl cursor-pointer mb-4">
+                    Phone<span class="text-red-500">arena</span>
+                </h1>
+                <p>The ultimate resource for handset information.</p>
+            </div>
+            <div class="social flex items-center justify-center gap-5">
+                <img src="./images/Social.svg" alt="">
+                <button class="btn bg-red-600 px-10 text-white font-medium hover:bg-blue-500">Join Premium</button>
+            </div>
+        </div>
+        <hr class="w-full my-5">
+        <div class="footer container mx-auto flex justify-around items-center">
+            <div>
+                <span class="footer-title">Product</span>
+                <a class="link link-hover">Browse jobs</a>
+                <a class="link link-hover">Remote jobs</a>
+                <a class="link link-hover">Startup jobs</a>
+                <a class="link link-hover">Company jobs</a>
+            </div>
+            <div>
+                <span class="footer-title">Popular</span>
+                <a class="link link-hover">UIUX Design</a>
+                <a class="link link-hover">Product Design</a>
+                <a class="link link-hover">Back-End Developer</a>
+                <a class="link link-hover">Front-End Developer</a>
+            </div>
+            <div>
+                <span class="footer-title">Resource</span>
+                <a class="link link-hover">Faq</a>
+                <a class="link link-hover">Support</a>
+                <a class="link link-hover">Privacy Policy</a>
+                <a class="link link-hover">Terms of Service</a>
+            </div>
+            <div>
+                <span class="footer-title">Company</span>
+                <a class="link link-hover">About Us</a>
+                <a class="link link-hover">Contact Us</a>
+                <a class="link link-hover">Career Tips</a>
+                <a class="link link-hover">Careers</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/api.js"></script>
+</body>
+
+</html>
